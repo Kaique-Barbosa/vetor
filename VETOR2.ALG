@@ -1,41 +1,67 @@
-Algoritmo "vetor2"
-// Disciplina   : [ Lógica de Programação]
-// Professor   :Carlos
+Algoritmo "exercicio 3 - 25/04"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi
 // Descrição   : Aqui você descreve o que o programa faz! (função)
-// Autor(a)    : Nome do(a) aluno(a)
+// Autor(a)    : Kaique Barbosa
 // Data atual  : 25/04/2023
 Var
-   // Seção de Declarações das variáveis
-   numero:vetor[1..5]de inteiro
-   i,maiorNumero,menorNumero:inteiro
 
+i:inteiro
+soma, media:real
+nota: vetor[1..5] de real
+maiorNumero, menorNumero: real
 Inicio
-   // Seção de Comandos, procedimento, funções, operadores, etc...
-   para i de 1 ate 5 faca
-      escreva("Digite",i,"ª número: ")
-      leia(numero[i])
-   fimpara
 
-   maiorNumero<-numero[1]
-   menorNumero<-numero[1]
-
+//menorNumero <- 999999
+para i de 1 ate 5 faca
+   escreval("Digite uma nota")
+    leia(nota[i])
+    soma <- soma + nota[i]
    limpatela
 
-   para i de 2 ate 5 faca
-      se numero[i] > maiorNumero entao
-         maiorNumero<-numero[i]
-      fimse
+   // se nota[i] < menorNumero entao
+   //    menorNumero <-  nota[i]
+   // fimse
 
-      se numero[i] < menorNumero entao
-         menorNumero<- numero[i]
-      fimse
+  //  se nota[i] > maiorNumero entao
+   //   maiorNumero <-  nota[i]
+   // fimse
 
-   fimpara
+   // JEITO 2 DE SE FAZER (POTEM TEM ERRO SE SOBREPOR NUMERO MENOR)
 
-   para i de 1 ate 5 faca
-      escreval("o",i,"° numero informado foi",numero[i])
-   fimpara
+     //se (nota[i] > maiorNumero) entao
+       // maiorNumero <- nota[i]
 
-   escreval("o maior número é: ",maiorNumero)
-   escreval("o menor número é: ",menorNumero)
+         //  se (menorNumero = 0) e (menorNumero < maiorNumero) entao
+           //  menorNumero <- nota[i]
+          // fimse
+
+    // senao
+      //  menorNumero <- nota[i]
+     //fimse
+
+     
+      // JEITO 3 DE SE FAZER (POTEM TEM ERRO SE SOBREPOR NUMERO MENOR)
+
+       maiorNumero<- nota[1]
+       menorNumero<- nota[1]
+
+       para i de 2 ate 5 faca
+         se nota[i] > maiorNumero entao
+            maiorNumer <-nota[i]
+         fimse
+
+         se nota[i] < menorNumero entao
+            menorNumero <- nota[i]
+         fimse
+
+      fimpara
+
+
+      // MOSTRAR NA TELA
+        escreval("A maior nota foi: ", maiorNumero)
+        escreval("A menor nota foi: ", menorNumero)
+fimpara
+
+
 Fimalgoritmo
