@@ -1,0 +1,36 @@
+Algoritmo "5 pessoas atividade"
+// Disciplina  :  [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Kaique Barbosa
+// Data atual  : 26/04/2023
+
+// Crie um algoritimo que leia o nome e a idade
+//de 5 pessoas, armazenando em vetores.
+
+Var
+
+   nome: vetor [1..5] de caracter
+   idade: vetor [1..5] de inteiro
+   i, j: inteiro
+
+Inicio
+
+// REPETIÇÃO PARA LER OS 5 DADOS E ARMAZENAR NO VETOR
+   para i de 1 ate 5 faca
+      escreval("Digite seu nome")
+      leia(nome[i])
+      escreval("Digite sua idade")
+      leia(idade[i])
+        limpatela
+   fimpara
+
+
+// REPETIÇÃO PARA MOSTRAR OS 5 DADOS E ARMAZENAR NO VETOR
+   para j de 1 ate 5 faca
+      escreval("Nome: ",nome[j])
+      escreval("idade: ",idade[j])
+   fimpara
+
+
+Fimalgoritmo
