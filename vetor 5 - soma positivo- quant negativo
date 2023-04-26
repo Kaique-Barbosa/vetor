@@ -1,0 +1,39 @@
+Algoritmo "quant negativo + soma positivo"
+// Disciplina  :  [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Kaique Barbosa
+// Data atual  : 26/04/2023
+//crie um algotritmo que preencha um vetor  com 10 numeros reais,
+//calcule e mostre a quantidade de números negativos e
+//a soma dos números positivos desse vetor.
+
+Var
+
+valorDigitado: vetor[1..10] de real
+i, j, contNegativo: inteiro
+somaPositivo: real
+
+Inicio
+
+// LER 10 VALORES E ARMAZENAR NO ARRAY
+
+   para i de 1 ate 10 faca
+
+      escreval("Ditite um valor")
+      leia (valorDigitado[i])
+
+      se (valorDigitado[i] < 0 ) entao
+         contNegativo <- contNegativo + 1
+      senao
+         somaPositivo <- somaPositivo + valorDigitado[i]
+      fimse
+      
+       limpatela
+  fimpara
+  
+  // MOSTRAR O CONTEUDO NA TELA
+   escreval("A quantidade de negativos foi: ",contNegativo)
+   escreval("A soma dos positivos foi: ",somaPositivo)
+
+Fimalgoritmo
