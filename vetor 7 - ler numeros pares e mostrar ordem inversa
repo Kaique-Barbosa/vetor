@@ -1,0 +1,30 @@
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Kaique Barbosa
+// Data atual  : 02/05/2023
+
+//criar um algoritimo que ler 6 numeros pares e em seguida mostre
+//na tela os valores em odem inversa
+Var
+
+valorP:vetor [1..6] de inteiro
+j, i: inteiro
+Inicio
+
+
+   para i de 1 ate 6 faca
+      escreval("Digite o ", i,  "º  valor par e  inteiro")
+      leia(valorP[i])
+   fimpara
+   
+   
+   para j de 6 ate 1 passo -1 faca
+       se (valorP[j]) > 0 e (valorP[j] mod 2 = 0) entao
+        escreval(valorP[j])
+       fimse
+   fimpara
+
+
+Fimalgoritmo
