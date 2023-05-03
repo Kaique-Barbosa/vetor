@@ -1,0 +1,57 @@
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Kaique Barbosa
+// Data atual  : 02/05/2023
+
+//crie um algoritimo que receba 3 disciplinas e 2 notas  pra
+//cada e mostre a disciplina
+//e a media
+
+
+Var
+
+   colegio:vetor [1..3, 1..3] de caracter
+   mediaV:vetor [1..3] de real
+   i, j, contador:inteiro
+   media, soma: real
+
+Inicio
+
+// repeticao para ler as 3 disciplinas
+   para i de 1 ate 3 faca
+      escreval("Digite a",i,"º disciplina")
+      leia(colegio[i])
+      limpatela
+   fimpara
+
+
+//repeticao  para ler as 2 notas de cada disciplina
+   para i de 1 ate 3 faca
+      escreval("Digite a 1º nota da materia: ",colegio[i])
+      leia(colegio[i,2])
+
+      escreval("Digite a 2º nota da materia: ",colegio[i])
+      leia(colegio[i,3])
+      
+      limpatela
+
+   fimpara
+
+   
+// repeticao para fazer a media de cada disciplina
+   para i de 1 ate 3 faca
+         contador <- contador +1
+         soma <- (caracpnum(colegio[i,2]) + caracpnum(colegio[i,3]))
+         mediaV[i] <- soma / 2
+   fimpara
+   
+   
+// repeticao para mostar os valores da media na tela
+   para i de 1 ate 3 faca
+      escreval("A media de ",colegio[i,1])
+      escreval("é de: ",mediaV[i])
+   fimpara
+
+Fimalgoritmo
