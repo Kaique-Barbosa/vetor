@@ -1,0 +1,45 @@
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Kaique Barbosa
+// Data atual  : 04/05/2023
+
+// crie um algoritimo que receba o nome de 3 disciplinas , receba 3 notas
+//para cada disciplina e mostre a média ponderada de cada disciplina
+// exemplo:
+//1º nota - 8,0 - peso 3
+//2º nota - 9,0 - peso 3
+//3º nota - 7,0 - peso 4
+//media: 9,0
+Var
+   aluno: vetor[1..3, 1..4] de caracter
+   media: vetor[1..4] de real
+   i,j : inteiro
+   soma: real
+Inicio
+   para i de 1 ate 3 faca
+      escreval("Digite a ",i,"º disciplina")
+      leia(aluno[i])
+
+      para j de 2 ate 4 faca
+            escreval("Digite a nota")
+            leia(aluno[i,j])
+         fimpara
+      fimpara
+
+
+   para i de 1 ate 3 faca
+        escreval("Digite o peso para: ", aluno[i])
+        leia(media[i])
+        
+        para j de 2 ate 4 faca
+        soma <- soma + caracpnum(alunos[i,j])
+        media[4]<- (media[i] * caracpnum(aluno[i,j])) / soma
+        fimpara
+   fimpara
+
+
+
+
+Fimalgoritmo
