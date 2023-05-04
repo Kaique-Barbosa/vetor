@@ -17,6 +17,7 @@ Var
    i, j, contador:inteiro
    media, soma: real
 
+
 Inicio
 
 // repeticao para ler as 3 disciplinas
@@ -34,24 +35,29 @@ Inicio
 
       escreval("Digite a 2º nota da materia: ",colegio[i])
       leia(colegio[i,3])
-      
+
       limpatela
 
    fimpara
 
-   
+
 // repeticao para fazer a media de cada disciplina
    para i de 1 ate 3 faca
          contador <- contador +1
          soma <- (caracpnum(colegio[i,2]) + caracpnum(colegio[i,3]))
          mediaV[i] <- soma / 2
    fimpara
-   
-   
+
+
 // repeticao para mostar os valores da media na tela
    para i de 1 ate 3 faca
-      escreval("A media de ",colegio[i,1])
+      escreval("A media de ","*",colegio[i,1],"*")
       escreval("é de: ",mediaV[i])
+      escreval("Primeira nota: ",colegio[i,2])
+      escreval("Segunda nota: ",colegio[i,3])
+      escreval("------------------------")
+      escreval()
+
    fimpara
 
 Fimalgoritmo
