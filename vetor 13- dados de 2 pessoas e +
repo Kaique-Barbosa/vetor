@@ -1,0 +1,75 @@
+Algoritmo "semnome"
+// Disciplina   : [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Kaique Barbosa
+// Data atual  : 06/05/2023
+
+// crie um algoritimo que leia os dados de 2 pessoas
+//-nome                  - conta bancatia:
+//-idade                   *Banco
+//-titulo de eleitor       *agencia
+//  *numero                *numero da conta
+//  *zona
+//  *seção
+
+Var
+
+   dados: vetor[1..2, 1..8] de caracter
+   i:inteiro
+Inicio
+
+   para i de 1 ate 2 faca
+      escreval("Digite seu nome")
+      leia(dados[i])
+      escreval("Digite sua idade")
+      leia(dados[i,2])
+
+      escreval("--------------------------")
+      limpatela
+
+      escreval("Agora vamos ao seu Titulo de eleitor")
+      escreval("Digite o numero")
+      leia(dados[i,3])
+      escreval("Digite a zona")
+      leia(dados[i,4])
+      escreval("Digite a seção")
+      leia(dados[i,5])
+
+      escreval("--------------------------")
+      limpatela
+
+      escreval("Dados da sua conta bancaria, Digite:")
+      escreval("Qual o seu banco:")
+      leia(dados[i,6])
+      escreval("Digite sua agencia")
+      leia(dados[i,7])
+      escreval("Digite o numero da sua conta")
+      leia(dados[i,8])
+
+      limpatela
+   fimpara
+
+
+   para i de 1 ate 2 faca
+      escreval("seu nome: ",dados[i])
+      escreval(" sua idade: ", dados[i,2])
+
+      escreval("--------------------------")
+
+      escreval("Titulo de eleitor")
+      escreval("numero: ", dados[i,3])
+      escreval("zona: ",dados[i,4])
+      escreval("seção: ",dados[i,5])
+
+      escreval("--------------------------")
+
+      escreval("conta bancaria")
+      escreval("banco: ", dados[i,6])
+      escreval("agencia: ", dados[i,7])
+      escreval("numero da sua conta: ",dados[i,8])
+
+   fimpara
+
+
+Fimalgoritmo
