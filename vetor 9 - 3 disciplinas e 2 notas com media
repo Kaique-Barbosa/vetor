@@ -3,61 +3,56 @@ Algoritmo "semnome"
 // Professor   : Antonio Carlos Nicolodi
 // Descrição   : Aqui você descreve o que o programa faz! (função)
 // Autor(a)    : Kaique Barbosa
-// Data atual  : 02/05/2023
+// Data atual  : 04/05/2023
 
-//crie um algoritimo que receba 3 disciplinas e 2 notas  pra
-//cada e mostre a disciplina
-//e a media
-
-
+// crie um algoritimo que receba o nome de 3 disciplinas , receba 3 notas
+//para cada disciplina e mostre a média ponderada de cada disciplina
+// exemplo:
+//1º nota - 8,0 - peso 3
+//2º nota - 9,0 - peso 3
+//3º nota - 7,0 - peso 4
+//media: 9,0
 Var
+   aluno: vetor[1..3, 1..4] de caracter
+   peso: vetor[1..4] de real
+   somaNota: vetor[1..3] de real
 
-   colegio:vetor [1..3, 1..3] de caracter
-   mediaV:vetor [1..3] de real
-   i, j, contador:inteiro
-   media, soma: real
-
-
+   i,j : inteiro
+   somaPeso, soma, mediaFinal: real
 Inicio
-
-// repeticao para ler as 3 disciplinas
    para i de 1 ate 3 faca
-      escreval("Digite a",i,"º disciplina")
-      leia(colegio[i])
+      escreval("Digite a ",i,"º disciplina")
+      leia(aluno[i])
+
+      para j de 2 ate 4 faca
+         escreval("Digite sua nota")
+         leia(aluno[i,j])
+      fimpara
       limpatela
    fimpara
 
-
-//repeticao  para ler as 2 notas de cada disciplina
-   para i de 1 ate 3 faca
-      escreval("Digite a 1º nota da materia: ",colegio[i])
-      leia(colegio[i,2])
-
-      escreval("Digite a 2º nota da materia: ",colegio[i])
-      leia(colegio[i,3])
-
+  para i de 1 ate 3 faca
+      escreval("Digite o peso para: ", aluno[i])
+      leia(peso[i])
       limpatela
+  fimpara
 
-   fimpara
-
-
-// repeticao para fazer a media de cada disciplina
    para i de 1 ate 3 faca
-         contador <- contador +1
-         soma <- (caracpnum(colegio[i,2]) + caracpnum(colegio[i,3]))
-         mediaV[i] <- soma / 2
+      para j de 2 ate 4 faca
+
+         soma <- soma + (peso[i] * caracpnum(aluno[i,j]))
+         somaPeso <- (somaPeso + peso[i])
+         mediaFinal <- (soma / somaPeso)
+         
+         somaNota[i] <- (somaNota[i] + caracpnum(aluno[i,j])) / 3
+      fimpara
    fimpara
 
-
-// repeticao para mostar os valores da media na tela
    para i de 1 ate 3 faca
-      escreval("A media de ","*",colegio[i,1],"*")
-      escreval("é de: ",mediaV[i])
-      escreval("Primeira nota: ",colegio[i,2])
-      escreval("Segunda nota: ",colegio[i,3])
-      escreval("------------------------")
-      escreval()
 
+      escreval("A media de ",aluno[i]," foi: ",somaNota[i]:6:2,"  peso: ",peso[i])
    fimpara
+
+      escreval("A sua media é: ", mediaFinal)
 
 Fimalgoritmo
