@@ -1,0 +1,27 @@
+Algoritmo "revisao 2"
+// Disciplina  :  [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 09/05/2023
+
+
+
+Var
+
+   valor: vetor[1..2] de inteiro
+   i: inteiro
+Inicio
+   para i de 1 ate 2 faca
+      escreval("Digite o ",i,"º valor inteiro")
+      leia(valor[i])
+
+      se i = 2 entao
+         escreval("A media é: ",(valor[1]+valor[2])/i)
+         escreval("A soma é: ",(valor[1] + valor[2]))
+         escreval("O poduto é:", (valor[1] * valor[2]))
+      fimse
+
+   fimpara
+
+Fimalgoritmo
