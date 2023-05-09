@@ -28,7 +28,23 @@ Inicio
          escreval("Digite o nome do integrantes")
          leia(banda[i,j])
       fimpara
-      
+
       limpatela
    fimpara
+
+   // mostrar na tela
+
+   para i de 1 ate 3 faca
+      escreval("A ",i,"º banda é: ",banda[i])
+
+      para j de 1 ate 5 faca
+         escreval("Digite o nome do",j,"º integrante")
+      fimpara
+      
+      escreval("---------------")
+      escreval()
+   fimpara
+
+
+
 Fimalgoritmo
